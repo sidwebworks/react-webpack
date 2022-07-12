@@ -1,7 +1,12 @@
-import React from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
+import { DrawerExample } from './Example';
 
-function App(props: { name: string }) {
-  return <h1>Hello {props.name}</h1>;
+function App() {
+  return (
+    <ChakraProvider>
+      <DrawerExample />
+    </ChakraProvider>
+  );
 }
 
 export default App;

@@ -1,21 +1,24 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "module": "esnext",
-    "target": "es2018",
-    "noEmit": true,
-    "lib": ["es6", "dom", "esnext.asynciterable", "es2018"],
-    "sourceMap": true,
-    "allowJs": true,
-    "jsx": "react",
+    // Target latest version of ECMAScript.
+    "target": "esnext",
+    // Search under node_modules for non-relative imports.
     "moduleResolution": "node",
-    "rootDir": "src",
-    "forceConsistentCasingInFileNames": true,
+    // Process & infer types from .js files.
+    "allowJs": true,
+    // Don't emit; allow Babel to transform files.
+    "noEmit": true,
+    // Enable strictest settings like strictNullChecks & noImplicitAny.
     "strict": true,
-    "noUnusedLocals": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
+    // Disallow features that require cross-file information for emit.
+    "isolatedModules": true,
+    // Allow React JSX 
+    "jsx": "preserve",
+    "jsxImportSource": "react",
+    // Import non-ES modules as default imports.
+    "esModuleInterop": true,
+    // Avoid checking node_modules
+    "skipLibCheck": true
   },
-  "include": ["./src/**/*.tsx", "./src/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src"]
 }
